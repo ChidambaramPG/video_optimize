@@ -8,6 +8,19 @@ Video helper service to optimise video and create thumbnails
 - Generate optimised mp4 file
 - Queue service
 
+
+## Running locally
+```sh
+cd video_optimize
+
+# install dependancies #
+npm install
+
+#run the app
+npm run start
+```
+
+
 ## Using a docker container
 
 ```sh
@@ -52,7 +65,6 @@ axios(config)
 ```
 
 ##### cURL example
-runs in shell
 
 ```sh
 curl --location --request POST 'http://localhost:8080/video-optimize' \
@@ -91,7 +103,6 @@ axios(config)
 ```
 
 ##### cURL example
-runs in shell
 
 ```sh
 curl --location --request POST 'http://localhost:8080/thumbnail' \
