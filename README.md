@@ -22,8 +22,10 @@ docker images
 docker run -p 8080:8080 -d chidambaram/video_service
 ```
 
-Testing the Optimization API
+## Testing the Optimization API
 
+##### JavaScript/NodeJS Example
+requirement : axios
 ```js
 var axios = require('axios');
 var FormData = require('form-data');
@@ -48,6 +50,14 @@ axios(config)
   console.log(error);
 });
 ```
+
+##### cURL example
+runs in shell
+```sh
+curl --location --request POST 'http://localhost:8080/video-optimize' \
+--form 'video=@"/PATH/TO/YOUR/FILE/FILE_NAME.MP4"'
+```
+
 
 Testing the Thumbnail API
 
@@ -75,5 +85,12 @@ axios(config)
   console.log(error);
 });
 
+```
+
+##### cURL example
+runs in shell
+```sh
+curl --location --request POST 'http://localhost:8080/thumbnail' \
+--form 'video=@"/PATH/TO/YOUR/FILE/FILE_NAME.MP4"'
 ```
 
