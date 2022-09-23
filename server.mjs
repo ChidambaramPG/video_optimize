@@ -62,7 +62,7 @@ app.post("/video-optimize", upload.single("video"), async (req, res) => {
     });
 
     res.writeHead(200, {
-      "Content-Type": "image/png",
+      "Content-Type": "video/mp4",
       "Content-Disposition": `attachment;filename=${outputFileName}`,
       "Content-Length": outputData.length,
     });
